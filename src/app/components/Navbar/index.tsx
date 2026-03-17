@@ -29,7 +29,7 @@ export default function Navbar() {
       className={cn(
         'w-full bg-[#2F251D] h-[37px]',
         'mx-auto flex w-full items-center gap-8 justify-center',
-        'px-4 sm:px-6 md:px-8 lg:px-16',
+        'sm:px-6 md:px-8 lg:px-[75px]',
       )}
     >
       <Link href="/" className="flex items-center justify-between">

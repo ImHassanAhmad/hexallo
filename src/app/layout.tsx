@@ -1,12 +1,19 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Montserrat } from 'next/font/google';
+import type { ReactNode } from 'react';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import './globals.css';
+import { cn } from './utility/cn';
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  variable: '--font-montserrat',
 });
 
 export const metadata: Metadata = {
@@ -17,12 +24,17 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${inter.className} min-h-screen bg-white text-neutral-900 antialiased`}
+        suppressHydrationWarning
+        className={cn(
+          inter.variable,
+          montserrat.variable,
+          'min-h-screen bg-white text-neutral-900 antialiased',
+        )}
       >
         <div className="flex min-h-screen flex-col">
           <Header />

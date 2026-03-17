@@ -6,29 +6,32 @@ import Link from 'next/link';
 
 import { cn } from '@/app/utility/cn';
 
+import Navbar from '@/app/components/Navbar';
+import SubNavbar from '@/app/components/SubNavbar';
+
 const navLinkClass = cn(
-  'cursor-pointer text-xs leading-none px-1.5 sm:px-2 text-[#6a6a6a] hover:text-[#3C3C3C] transition-colors duration-300',
+  'cursor-pointer text-xs leading-none px-[8px] sm:px-2 text-[#6a6a6a] hover:text-[#3C3C3C] transition-colors duration-300',
 );
 
 const dropdownClass = cn(
-  'cursor-pointer inline-flex items-center text-xs leading-none text-left hover:opacity-80 transition-opacity duration-300',
+  'px-[10px] cursor-pointer inline-flex items-center text-xs leading-none text-left hover:opacity-80 transition-opacity duration-300',
 );
 
-const chevronDownClass = cn('ml-0.5 mr-0.5 shrink-0');
+const chevronDownClass = cn('mx-[5px] shrink-0');
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white">
       <div
         className={cn(
-          'mx-auto flex min-h-9 w-full max-w-[1920px] flex-wrap items-center justify-end gap-x-2 gap-y-1',
+          'text-[#6A6A6A] mx-auto flex min-h-9 w-full max-w-[1920px] flex-wrap items-center justify-end gap-x-2 gap-y-1',
           'px-3 py-2 sm:px-5 sm:py-1.5 md:px-8 lg:px-16',
         )}
       >
         <div className="order-2 flex flex-1 items-center justify-end gap-x-1 sm:gap-x-0 md:order-1 md:flex-initial">
           <nav
             aria-label="Primary"
-            className="hidden items-center gap-0.5 md:flex"
+            className="hidden items-center gap-[3px] md:flex"
           >
             <Link className={navLinkClass} href="/">
               Events Calendar
@@ -47,10 +50,7 @@ export default function Header() {
               className={dropdownClass}
               aria-label="Language"
             >
-              <LanguageIcon
-                aria-hidden
-                className="ml-2 mr-1.5 h-3.5 w-3.5 shrink-0"
-              />
+              <LanguageIcon aria-hidden className="mr-[6.37px]" />
               <span className="truncate">EN(US)</span>
               <ArrowDownIcon aria-hidden className={chevronDownClass} />
             </button>
@@ -60,7 +60,7 @@ export default function Header() {
               className={dropdownClass}
               aria-label="Country"
             >
-              <FlagIcon className="ml-2 mr-1.5 h-3.5 w-3.5 shrink-0" />
+              <FlagIcon className="ml-2 mr-1.5" />
               <span className="hidden truncate lg:inline">United States</span>
               <ArrowDownIcon className={chevronDownClass} />
             </button>
@@ -72,8 +72,8 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="order-1 flex items-center gap-2 md:order-2 md:ml-3">
-          <div className="flex items-center gap-1.5 text-xs text-[#3C3C3C] sm:gap-2">
+        <div className="order-1 flex items-center gap-2 md:order-2">
+          <div className="text-[#3C3C3C] px-[8px] flex items-center gap-1.5 text-xs sm:gap-2">
             <Link
               href="/"
               className="cursor-pointer transition-colors duration-300 hover:underline"
@@ -90,19 +90,21 @@ export default function Header() {
           </div>
 
           <Link
-            className="cursor-pointer px-1.5 text-xs font-medium leading-none text-[#AE6F28] transition-colors duration-300 hover:underline sm:px-2 sm:text-sm"
+            className="px-[8px] cursor-pointer text-xs font-medium leading-none text-[#AE6F28] transition-colors duration-300 hover:underline sm:px-2 sm:text-sm"
             href="/"
           >
             Business
           </Link>
           <Link
-            className="cursor-pointer px-1.5 text-xs font-bold leading-none text-black transition-colors duration-300 hover:underline sm:px-2 sm:text-sm"
-            href="/create-event"
+            className="px-[8px] cursor-pointer text-xs font-bold leading-none text-black transition-colors duration-300 hover:underline sm:px-2 sm:text-sm"
+            href="/"
           >
             Create Event
           </Link>
         </div>
       </div>
+      <Navbar />
+      <SubNavbar />
     </header>
   );
 }

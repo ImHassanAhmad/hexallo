@@ -27,7 +27,7 @@ export default function SubNavbar() {
     <nav
       aria-label="Sub navigation"
       className={cn(
-        'w-full bg-[#F5F5F5] min-h-[37px]',
+        'w-full bg-[#F2F2F2] min-h-[37px]',
         'mx-auto flex w-full items-center justify-center',
         'px-4 sm:px-6 md:px-8 lg:px-16',
       )}

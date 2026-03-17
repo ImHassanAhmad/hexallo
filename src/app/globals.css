@@ -18,6 +18,11 @@
   --font-mono: ui-monospace, monospace;
 }
 
+/* Montserrat font utility for section components */
+.font-montserrat {
+  font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
@@ -25,7 +30,12 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
+  overflow-x: hidden;
   background: var(--background);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
@@ -34,7 +44,11 @@ body {
 a {
   transition: color 0.3s ease;
 }
+
 button {
-  transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease,
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease,
+    background-color 0.3s ease,
     border-color 0.3s ease;
 }

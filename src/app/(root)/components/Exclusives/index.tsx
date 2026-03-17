@@ -48,10 +48,19 @@ const EXCLUSIVES_ITEMS: ExclusiveCardItem[] = [
   },
 ];
 
+const EXCLUSIVES_SLIDER_BREAKPOINTS = {
+  320: { slidesPerView: 1.1 },
+  480: { slidesPerView: 1.35 },
+  640: { slidesPerView: 1.6 },
+  768: { slidesPerView: 1.5 },
+  1024: { slidesPerView: 1.55 },
+  1280: { slidesPerView: 1.95 },
+};
+
 export default function Exclusives() {
   return (
     <section
-      className="w-full px-[42px] sm:px-6 md:px-8 lg:px-16 py-8 bg-[#FEFEFE]"
+      className="w-full sm:mx-6 md:mx-8 lg:mx-[39px] pb-8"
       aria-labelledby="exclusives-heading"
     >
       <div className="w-full mx-auto flex flex-col gap-6">
@@ -65,11 +74,11 @@ export default function Exclusives() {
           </h2>
         </header>
 
-        <Slider>
+        <Slider breakpoints={EXCLUSIVES_SLIDER_BREAKPOINTS}>
           {EXCLUSIVES_ITEMS.map((item) => (
             <SliderSlide
               key={item.id}
-              className="w-[320px]! sm:w-[400px]! md:w-[500px]! lg:w-[665px]!"
+              className="w-[320px]! sm:w-[400px]! md:w-[500px]! lg:w-[665px]! py-2"
             >
               <ExclusiveCard item={item} />
             </SliderSlide>

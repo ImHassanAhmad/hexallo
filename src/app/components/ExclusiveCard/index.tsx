@@ -18,7 +18,7 @@ type ExclusiveCardProps = {
 
 export default function ExclusiveCard({ item }: ExclusiveCardProps) {
   return (
-    <article className="group h-full flex flex-col overflow-hidden rounded-2xl">
+    <article className="mx-1 group h-full flex flex-col overflow-hidden rounded-2xl">
       <div className="relative w-full aspect-665/316 overflow-hidden rounded-2xl shrink-0">
         <Image
           src={item.image}

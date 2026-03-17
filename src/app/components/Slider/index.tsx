@@ -22,7 +22,7 @@ export type SliderProps = {
 
 export default function Slider({
   children,
-  spaceBetween = 12,
+  spaceBetween = 10,
   breakpoints = DEFAULT_BREAKPOINTS,
   className,
 }: SliderProps) {
@@ -31,7 +31,7 @@ export default function Slider({
       spaceBetween={spaceBetween}
       slidesPerView="auto"
       breakpoints={breakpoints}
-      className={className ?? 'overflow-visible!'}
+      className={className ?? 'w-full overflow-hidden'}
       grabCursor
     >
       {children}

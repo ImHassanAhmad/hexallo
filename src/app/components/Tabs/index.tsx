@@ -32,7 +32,9 @@ export default function Tabs({
   activeTextColor,
   activeBorderColor,
 }: TabsProps) {
-  const [activeId, setActiveId] = useState(defaultActiveId ?? items[0]?.id ?? '');
+  const [activeId, setActiveId] = useState(
+    defaultActiveId ?? items[0]?.id ?? '',
+  );
 
   const hasCustomColors =
     inactiveTextColor != null ||
@@ -40,19 +42,23 @@ export default function Tabs({
     activeBorderColor != null;
 
   const baseTabClass = cn(
-    'text-[12px] font-normal border-transparent shrink-0 whitespace-nowrap px-2 py-[7px] transition-colors duration-300',
+    'border-b-4 text-[12px] font-normal border-transparent shrink-0 whitespace-nowrap px-2 pt-[10px] pb-[5px] transition-colors duration-300',
     'cursor-pointer',
-    hasCustomColors ? 'border-b-2' : 'border-b-4',
     !hasCustomColors && 'text-white hover:text-white/90',
   );
   const activeClass = cn(
-    hasCustomColors ? 'border-b-2 font-medium' : 'border-b-4 font-semibold',
+    hasCustomColors ? 'font-medium' : 'font-semibold',
     !hasCustomColors && 'border-[#EFC96D]',
     activeTabClassName,
   );
 
   return (
-    <div className={cn('flex flex-1 items-center justify-end gap-[5.5px]', className)}>
+    <div
+      className={cn(
+        'flex flex-1 items-center justify-end gap-[5.5px]',
+        className,
+      )}
+    >
       {items.map(({ id, label }) => {
         const isActive = activeId === id;
         return (
@@ -60,11 +66,7 @@ export default function Tabs({
             key={id}
             type="button"
             onClick={() => setActiveId(id)}
-            className={cn(
-              baseTabClass,
-              tabClassName,
-              isActive && activeClass,
-            )}
+            className={cn(baseTabClass, tabClassName, isActive && activeClass)}
             style={
               hasCustomColors
                 ? {

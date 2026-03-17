@@ -16,7 +16,7 @@ const SOCIAL_PLATFORMS = [
 export default function Footer() {
   return (
     <footer
-      className="flex w-full flex-wrap items-center justify-between gap-4 bg-[#AE7029] px-6 py-4 text-[#f5e6d3] md:px-8 lg:px-16"
+      className="flex w-full flex-wrap items-center justify-between gap-4 bg-[#AE7029] py-4 text-[#f5e6d3] md:px-8 lg:px-[70px]"
       role="contentinfo"
     >
       <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
