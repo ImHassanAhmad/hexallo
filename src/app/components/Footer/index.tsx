@@ -29,19 +29,19 @@ export default function Footer() {
         >
           <Link
             href="/privacy"
-            className="text-[#FFF6DF] text-[16px] font-medium"
+            className="text-[#FFF6DF] text-[16px] font-medium hover:opacity-75 transition-opacity duration-200"
           >
             Privacy policy
           </Link>
           <Link
             href="/terms"
-            className="text-[#FFF6DF] text-[16px] font-medium"
+            className="text-[#FFF6DF] text-[16px] font-medium hover:opacity-75 transition-opacity duration-200"
           >
             Terms of service
           </Link>
           <Link
             href="/contact"
-            className="text-[#FFF6DF] text-[16px] font-medium"
+            className="text-[#FFF6DF] text-[16px] font-medium hover:opacity-75 transition-opacity duration-200"
           >
             Contact us
           </Link>
@@ -49,7 +49,12 @@ export default function Footer() {
       </div>
       <div className="flex items-center gap-4" aria-label="Social links">
         {SOCIAL_PLATFORMS.map(({ label, Component }) => (
-          <div key={label} title={label} aria-label={label}>
+          <div
+            key={label}
+            title={label}
+            aria-label={label}
+            className="cursor-pointer opacity-90 hover:opacity-60 transition-opacity duration-200"
+          >
             <Component />
           </div>
         ))}

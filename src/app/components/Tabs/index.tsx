@@ -14,11 +14,8 @@ type TabsProps = {
   className?: string;
   tabClassName?: string;
   activeTabClassName?: string;
-  /** Inactive tab text color (e.g. '#6B7280') */
   inactiveTextColor?: string;
-  /** Active tab text color (e.g. '#1F2937') */
   activeTextColor?: string;
-  /** Active tab bottom border color (e.g. '#D8A660') */
   activeBorderColor?: string;
 };
 
@@ -42,9 +39,10 @@ export default function Tabs({
     activeBorderColor != null;
 
   const baseTabClass = cn(
-    'border-b-4 text-[12px] font-normal border-transparent shrink-0 whitespace-nowrap px-2 pt-[10px] pb-[5px] transition-colors duration-300',
+    'border-b-4 text-[12px] font-normal border-transparent shrink-0 whitespace-nowrap px-2 pt-[10px] pb-[5px] transition-all duration-200',
     'cursor-pointer',
     !hasCustomColors && 'text-white hover:text-white/90',
+    hasCustomColors && 'hover:opacity-75',
   );
   const activeClass = cn(
     hasCustomColors ? 'font-medium' : 'font-semibold',

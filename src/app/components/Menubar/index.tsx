@@ -2,7 +2,7 @@ import Tabs from '@/app/components/Tabs';
 import type { TabItem } from '@/app/components/Tabs';
 import { cn } from '@/app/utility/cn';
 
-const navItems: TabItem[] = [
+const NAV_ITEMS: TabItem[] = [
   { id: 'home', label: 'Home' },
   { id: 'events', label: 'Events' },
   { id: 'tours', label: 'Tours' },
@@ -22,7 +22,7 @@ const navItems: TabItem[] = [
   { id: 'virtual-experiences', label: 'Virtual Experiences' },
 ];
 
-export default function SubNavbar() {
+export default function Menubar() {
   return (
     <nav
       aria-label="Sub navigation"
@@ -33,7 +33,7 @@ export default function SubNavbar() {
       )}
     >
       <Tabs
-        items={navItems}
+        items={NAV_ITEMS}
         defaultActiveId="home"
         inactiveTextColor="#6A6A6A"
         activeTextColor="#6A6A6A"

@@ -20,7 +20,7 @@ export default function GlobalHighlightCard({
   item,
 }: GlobalHighlightCardProps) {
   return (
-    <article className="mx-1 shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-shadow group h-[361.36px] w-[328.18px] overflow-hidden rounded-2xl bg-[#F0F0F0]">
+    <article className="mx-1 shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[4.7px_4.7px_29.4px_0px_#0000001A] transition-shadow duration-300 group h-[361.36px] w-[328.18px] overflow-hidden rounded-2xl bg-[#F0F0F0]">
       <div className="relative h-full w-full">
         <Image
           src={item.image}
@@ -39,7 +39,10 @@ export default function GlobalHighlightCard({
               {item.title}
             </h3>
             <span className="mt-1 inline-flex items-center gap-1 text-[9.54px] font-medium text-white">
-              Explore Now <FullArrowRightIcon />
+              Explore Now{' '}
+              <span className="transition-transform duration-200 group-hover:translate-x-1">
+                <FullArrowRightIcon />
+              </span>
             </span>
           </div>
         </div>

@@ -1,141 +1,10 @@
 'use client';
 
 import ArrowRightIcon from '@/icons/arrowRight.svg';
+import Section from '@/app/components/Section';
 import Slider, { SliderSlide } from '@/app/components/Slider';
-import SpotlightCard from '@/app/components/SpotlightCard';
-
-const FOR_YOU_ITEMS = [
-  {
-    id: 1,
-    image:
-      'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=600&q=80',
-    alt: 'Live music performance',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-  {
-    id: 2,
-    image:
-      'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80',
-    alt: 'Outdoor dinner party',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-  {
-    id: 3,
-    image:
-      'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600&q=80',
-    alt: 'Fairground at night',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-  {
-    id: 4,
-    image:
-      'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&q=80',
-    alt: 'Art gallery',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-  {
-    id: 5,
-    image:
-      'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80',
-    alt: 'Concert crowd',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-  {
-    id: 6,
-    image:
-      'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=600&q=80',
-    alt: 'Live music performance',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-  {
-    id: 7,
-    image:
-      'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80',
-    alt: 'Outdoor dinner party',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-  {
-    id: 8,
-    image:
-      'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600&q=80',
-    alt: 'Fairground at night',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-  {
-    id: 9,
-    image:
-      'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&q=80',
-    alt: 'Art gallery',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-  {
-    id: 10,
-    image:
-      'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80',
-    alt: 'Concert crowd',
-    category: 'Lounge',
-    title: 'DJ Liv North Live',
-    time: 'Wed, 5th Dec · 10:30 PM - 12:30 PM',
-    location: 'NewYork City',
-    price: '89',
-    rating: 4.8,
-    backgroundColor: '#FFFFFF',
-  },
-];
+import SpotlightCard from '@/app/components/Cards/SpotlightCard';
+import { FOR_YOU_ITEMS } from './constants';
 
 export default function ForYou() {
   return (
@@ -143,17 +12,11 @@ export default function ForYou() {
       className="w-full overflow-x-hidden sm:mx-6 md:mx-8 lg:mx-[39px] py-[106px]"
       aria-labelledby="for-you-heading"
     >
-      <div className="w-full mx-auto">
-        <header className="flex items-center justify-between mb-6">
-          <h2
-            id="for-you-heading"
-            className="flex items-center gap-[10.5px] text-[18px] font-bold text-[#484848]"
-          >
-            For you
-            <ArrowRightIcon />
-          </h2>
-        </header>
-
+      <Section
+        title="For you"
+        titleId="for-you-heading"
+        titleTrailing={<ArrowRightIcon />}
+      >
         <Slider>
           {FOR_YOU_ITEMS.map((item) => (
             <SliderSlide
@@ -164,7 +27,7 @@ export default function ForYou() {
             </SliderSlide>
           ))}
         </Slider>
-      </div>
+      </Section>
     </section>
   );
 }

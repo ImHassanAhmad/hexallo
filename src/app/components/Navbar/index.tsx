@@ -4,7 +4,7 @@ import Tabs from '@/app/components/Tabs';
 import type { TabItem } from '@/app/components/Tabs';
 import { cn } from '@/app/utility/cn';
 
-const navItems: TabItem[] = [
+const NAV_ITEMS: TabItem[] = [
   { id: 'explore', label: 'Explore' },
   { id: 'services', label: 'Services' },
   { id: 'nightlife', label: 'Nightlife' },
@@ -32,11 +32,11 @@ export default function Navbar() {
         'sm:px-6 md:px-8 lg:px-[75px]',
       )}
     >
-      <Link href="/" className="flex items-center justify-between">
+      <Link href="/" className="flex items-center justify-between opacity-100 hover:opacity-75 transition-opacity duration-200">
         <LogoIcon />
       </Link>
 
-      <Tabs items={navItems} defaultActiveId="explore" />
+      <Tabs items={NAV_ITEMS} defaultActiveId="explore" />
     </nav>
   );
 }

@@ -7,7 +7,6 @@ export type DestinationCardItem = {
   image: string;
   alt: string;
   title: string;
-  /** e.g. "1.2k check-ins this week" */
   stat: string;
   description: string;
   href?: string;

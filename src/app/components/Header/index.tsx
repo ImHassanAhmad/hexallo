@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { cn } from '@/app/utility/cn';
 
 import Navbar from '@/app/components/Navbar';
-import SubNavbar from '@/app/components/SubNavbar';
+import Menubar from '@/app/components/Menubar';
 
 const navLinkClass = cn(
   'cursor-pointer text-xs leading-none px-[8px] sm:px-2 text-[#6a6a6a] hover:text-[#3C3C3C] transition-colors duration-300',
@@ -104,7 +104,7 @@ export default function Header() {
         </div>
       </div>
       <Navbar />
-      <SubNavbar />
+      <Menubar />
     </header>
   );
 }

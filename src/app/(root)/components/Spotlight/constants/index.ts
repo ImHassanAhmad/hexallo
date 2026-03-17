@@ -1,0 +1,118 @@
+export const SPOTLIGHT_ITEMS = [
+  {
+    id: 1,
+    image:
+      'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=600&q=80',
+    alt: 'Live music performance',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+  {
+    id: 2,
+    image:
+      'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80',
+    alt: 'Outdoor dinner party',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+  {
+    id: 3,
+    image:
+      'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600&q=80',
+    alt: 'Fairground at night',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+  {
+    id: 4,
+    image:
+      'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&q=80',
+    alt: 'Art gallery',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+  {
+    id: 5,
+    image:
+      'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80',
+    alt: 'Concert crowd',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+  {
+    id: 6,
+    image:
+      'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=600&q=80',
+    alt: 'Live music performance',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+  {
+    id: 7,
+    image:
+      'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80',
+    alt: 'Outdoor dinner party',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+  {
+    id: 8,
+    image:
+      'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?w=600&q=80',
+    alt: 'Fairground at night',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+  {
+    id: 9,
+    image:
+      'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=600&q=80',
+    alt: 'Art gallery',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+  {
+    id: 10,
+    image:
+      'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600&q=80',
+    alt: 'Concert crowd',
+    category: 'Lounge',
+    title: 'DJ Liv North Live',
+    time: '10:30 PM - 12:30 PM',
+    location: 'NewYork City',
+    price: '89',
+  },
+];
+
+export const SPOTLIGHT_ROWS = [
+  { id: 'tonight', title: "Tonight's Spotlight" },
+  { id: 'hot this week', title: 'Hot This Week' },
+  { id: 'unmissable ', title: 'Unmissable ' },
+];

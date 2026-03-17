@@ -38,10 +38,12 @@ export default function RootLayout({
       >
         <div className="flex min-h-screen flex-col">
           <Header />
-          <main className="mx-auto flex w-full flex-1 flex-col">
-            {children}
-          </main>
-          <Footer />
+          <div className="h-[calc(100vh-110px)] overflow-y-auto overflow-x-hidden">
+            <main className="mx-auto flex w-full flex-1 flex-col">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </div>
       </body>
     </html>

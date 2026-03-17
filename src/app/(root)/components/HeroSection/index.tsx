@@ -6,6 +6,7 @@ import { Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import SearchIcon from '@/icons/search.svg';
 import Image from 'next/image';
+import { cn } from '@/app/utility/cn';
 
 const HERO_SLIDES = [
   {
@@ -51,7 +52,6 @@ export default function HeroSection() {
     >
       <div className="w-full mx-auto flex flex-col items-center gap-5">
         <div className="relative w-full rounded-3xl overflow-hidden shadow-lg border border-white/20 min-h-[570px]">
-          {/* Background Swiper */}
           <Swiper
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
@@ -84,7 +84,6 @@ export default function HeroSection() {
             ))}
           </Swiper>
 
-          {/* Overlay content */}
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 pt-12 pb-24">
             <h1 className="text-center text-[36px] font-bold text-white drop-shadow-md max-w-4xl leading-tight">
               Discover, Book & Enjoy What&apos;s
@@ -95,7 +94,6 @@ export default function HeroSection() {
               From local events to world-famous experiences — all in one place.
             </p>
 
-            {/* Search bar */}
             <div className="border-b-[1.75px] border-[#E3E3E1] mt-8 w-full max-w-[612px] flex flex-col sm:flex-row gap-2 sm:gap-3 sm:h-[37px] p-0 bg-white rounded-[12px] shadow-xl items-center">
               <label className="sr-only" htmlFor="hero-search-event">
                 Search any event
@@ -126,7 +124,7 @@ export default function HeroSection() {
               />
               <button
                 type="button"
-                className="mr-[10px] flex items-center justify-center h-[29px] w-[35px] rounded-[12px] bg-[#AE6F28]"
+                className="mr-[10px] flex items-center justify-center h-[29px] w-[35px] rounded-[12px] bg-[#AE6F28] hover:bg-[#C07E30] active:scale-95 transition-all duration-200"
                 aria-label="Search"
               >
                 <SearchIcon />
@@ -135,7 +133,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Pagination dots - below hero */}
         <div
           className="flex gap-[12px]"
           role="tablist"
@@ -149,11 +146,12 @@ export default function HeroSection() {
               aria-selected={activeIndex === index}
               aria-label={`Go to slide ${index + 1}`}
               onClick={() => swiperRef.current?.slideToLoop(index)}
-              className={`h-[11px] w-[11px] rounded-full transition-all duration-200 ${
+              className={cn(
+                'h-[11px] rounded-full transition-all duration-300',
                 activeIndex === index
-                  ? 'bg-[#8B6914]'
-                  : 'bg-[#D4D4D4] hover:bg-[#A3A3A3]'
-              }`}
+                  ? 'w-[28px] bg-[#8B6914]'
+                  : 'w-[11px] bg-[#D4D4D4] hover:bg-[#A3A3A3]',
+              )}
             />
           ))}
         </div>

@@ -26,7 +26,7 @@ export default function SpotlightCard({
 }: SpotlightCardProps) {
   return (
     <article
-      className="mx-1 border-2 border-[#FFFFFF] group rounded-[16px] px-[7px] py-[8px] overflow-hidden ring-1 ring-black/5 h-full flex flex-col bg-white"
+      className="mx-1 border-2 border-[#FFFFFF] group rounded-[16px] px-[7px] py-[8px] overflow-hidden ring-1 ring-black/5 h-full flex flex-col bg-white shadow-[0_2px_12px_rgba(0,0,0,0.06)] hover:shadow-[4.7px_4.7px_20px_0px_#0000001A] transition-shadow duration-300"
       style={{ backgroundColor }}
     >
       <div className="relative aspect-4/3 overflow-hidden shrink-0 rounded-[16px]">

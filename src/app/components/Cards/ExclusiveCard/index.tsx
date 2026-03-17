@@ -34,7 +34,9 @@ export default function ExclusiveCard({ item }: ExclusiveCardProps) {
           </p>
           <span className="mt-2 inline-flex items-center gap-1.5 text-[12px] font-semibold text-white">
             Explore Now
-            <FullArrowRightIcon />
+            <span className="transition-transform duration-200 group-hover:translate-x-1">
+              <FullArrowRightIcon />
+            </span>
           </span>
         </div>
       </div>
