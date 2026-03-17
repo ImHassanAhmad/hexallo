@@ -2,6 +2,31 @@ export const MS_PER_SEC = 1000;
 export const SEC_PER_MIN = 60;
 export const SEC_PER_HOUR = 60 * 60;
 export const SEC_PER_DAY = 24 * 60 * 60;
+export const MORE_BTN_WIDTH = 36;
+export const GAP = 5.5;
+
+export function calcVisibleCount(
+  tabWidths: number[],
+  containerWidth: number,
+): number {
+  const total = tabWidths.reduce((sum, w, i) => sum + w + (i > 0 ? GAP : 0), 0);
+
+  if (total <= containerWidth) return tabWidths.length;
+
+  let usedWidth = 0;
+  let count = 0;
+  for (let i = 0; i < tabWidths.length - 1; i++) {
+    const w = tabWidths[i] + (i > 0 ? GAP : 0);
+    if (usedWidth + w + GAP + MORE_BTN_WIDTH <= containerWidth) {
+      usedWidth += w;
+      count = i + 1;
+    } else {
+      break;
+    }
+  }
+
+  return Math.max(1, count);
+}
 
 export type CountdownState = {
   days: string;

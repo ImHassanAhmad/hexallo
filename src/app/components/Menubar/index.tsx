@@ -28,7 +28,7 @@ export default function Menubar() {
       aria-label="Sub navigation"
       className={cn(
         'w-full bg-[#F2F2F2] min-h-[37px]',
-        'hidden md:flex w-full items-center overflow-hidden',
+        'hidden md:flex w-full items-center overflow-visible',
         'px-4 sm:px-6 md:px-8 lg:px-16',
       )}
     >
@@ -38,7 +38,7 @@ export default function Menubar() {
         inactiveTextColor="#6A6A6A"
         activeTextColor="#6A6A6A"
         activeBorderColor="#AE6F28"
-        className="justify-start"
+        className="justify-center"
       />
     </nav>
   );

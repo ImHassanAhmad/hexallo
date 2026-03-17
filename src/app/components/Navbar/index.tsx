@@ -29,17 +29,20 @@ export default function Navbar() {
       aria-label="Main navigation"
       className={cn(
         'w-full bg-[#2F251D] min-h-[37px]',
-        'mx-auto flex w-full items-center gap-4 overflow-hidden',
+        'mx-auto flex w-full items-center gap-4 overflow-visible',
         'px-4 sm:px-6 md:px-8 lg:px-[75px]',
       )}
     >
-      <Link href="/" className="shrink-0 flex items-center opacity-100 hover:opacity-75 transition-opacity duration-200">
+      <Link
+        href="/"
+        className="shrink-0 flex items-center opacity-100 hover:opacity-75 transition-opacity duration-200"
+      >
         <LogoIcon />
       </Link>
 
       {/* Tabs — desktop only */}
-      <div className="hidden md:flex flex-1 min-w-0 overflow-x-auto scrollbar-hide">
-        <Tabs items={NAV_ITEMS} defaultActiveId="explore" />
+      <div className="hidden md:flex flex-1 min-w-0 overflow-visible">
+        <Tabs items={NAV_ITEMS} defaultActiveId="explore" className="justify-end" />
       </div>
 
       {/* Hamburger — mobile only */}

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import HeroSection from './components/HeroSection';
 import Spotlight from './components/Spotlight';
 import Exclusives from './components/Exclusives';
@@ -8,6 +9,22 @@ import Discover from './components/Discover';
 import Explore from './components/Explore';
 import TopTen from './components/TopTen';
 import GlobalHighlights from './components/GlobalHighlights';
+
+export const metadata: Metadata = {
+  title: 'Discover Exclusive Travel Deals & Destinations',
+  description:
+    'Browse spotlight destinations, exclusive hotel deals, top-ten lists, and curated travel experiences. Plan and book your perfect trip with Hexallo.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Hexallo — Discover Exclusive Travel Deals & Destinations',
+    description:
+      'Browse spotlight destinations, exclusive hotel deals, top-ten lists, and curated travel experiences. Plan and book your perfect trip with Hexallo.',
+    url: '/',
+    type: 'website',
+  },
+};
 
 export default function Home() {
   return (
