@@ -9,10 +9,10 @@ import { SPOTLIGHT_ITEMS, SPOTLIGHT_ROWS } from './constants';
 export default function Spotlight() {
   return (
     <section
-      className="w-full pr-0 pb-[106px] sm:pl-6 sm:pr-0 md:pl-8 md:pr-0 lg:pl-[39px] lg:pr-0"
+      className="w-full pr-0 pb-10 sm:pb-16 md:pb-[106px] pl-4 sm:pl-6 md:pl-8 lg:pl-[39px]"
       aria-labelledby="spotlight-heading"
     >
-      <div className="mx-auto flex w-full flex-col gap-[106px]">
+      <div className="mx-auto flex w-full flex-col gap-10 sm:gap-16 md:gap-[106px]">
         {SPOTLIGHT_ROWS.map((row) => (
           <Section
             key={row.id}

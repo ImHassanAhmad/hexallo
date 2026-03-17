@@ -2,6 +2,7 @@ import Link from 'next/link';
 import LogoIcon from '@/icons/logo.svg';
 import Tabs from '@/app/components/Tabs';
 import type { TabItem } from '@/app/components/Tabs';
+import MobileMenu from '@/app/components/MobileMenu';
 import { cn } from '@/app/utility/cn';
 
 const NAV_ITEMS: TabItem[] = [
@@ -27,16 +28,22 @@ export default function Navbar() {
     <nav
       aria-label="Main navigation"
       className={cn(
-        'w-full bg-[#2F251D] h-[37px]',
-        'mx-auto flex w-full items-center gap-8 justify-center',
-        'sm:px-6 md:px-8 lg:px-[75px]',
+        'w-full bg-[#2F251D] min-h-[37px]',
+        'mx-auto flex w-full items-center gap-4 overflow-hidden',
+        'px-4 sm:px-6 md:px-8 lg:px-[75px]',
       )}
     >
-      <Link href="/" className="flex items-center justify-between opacity-100 hover:opacity-75 transition-opacity duration-200">
+      <Link href="/" className="shrink-0 flex items-center opacity-100 hover:opacity-75 transition-opacity duration-200">
         <LogoIcon />
       </Link>
 
-      <Tabs items={NAV_ITEMS} defaultActiveId="explore" />
+      {/* Tabs — desktop only */}
+      <div className="hidden md:flex flex-1 min-w-0 overflow-x-auto scrollbar-hide">
+        <Tabs items={NAV_ITEMS} defaultActiveId="explore" />
+      </div>
+
+      {/* Hamburger — mobile only */}
+      <MobileMenu />
     </nav>
   );
 }

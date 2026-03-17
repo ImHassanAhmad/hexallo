@@ -64,7 +64,7 @@ export default function Deals() {
   }, []);
 
   return (
-    <section className="w-full  sm:pl-6 md:pl-8 lg:pl-[39px] pb-[106px]">
+    <section className="w-full pl-4 sm:pl-6 md:pl-8 lg:pl-[39px] pr-4 sm:pr-0 pb-10 sm:pb-16 md:pb-[106px]">
       <div className="w-full mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10 items-start">
         <div className="w-full lg:max-w-[320px]">
           <h2 className="text-[18px] font-semibold text-[#484848]">
@@ -86,7 +86,7 @@ export default function Deals() {
             Offer ends in...
           </p>
 
-          <div className="mt-4 flex items-start gap-3">
+          <div className="mt-4 flex items-start gap-3 justify-center">
             <CountdownBox value={countdown.days} label="Days" />
             <CountdownBox value={countdown.hours} label="Hr" />
             <CountdownBox value={countdown.mins} label="Mins" />

@@ -8,7 +8,7 @@ import { EXPLORE_ITEMS, EXPLORE_LAST_IN_ROW } from './constants';
 export default function Explore() {
   return (
     <section
-      className="w-full overflow-x-hidden sm:px-6 md:px-8 lg:px-[39px] pt-[37.33px] pb-[63px] bg-[#F8F6EB]"
+      className="w-full overflow-x-hidden px-4 sm:px-6 md:px-8 lg:px-[39px] pt-6 pb-8 sm:pt-[37px] sm:pb-[63px] bg-[#F8F6EB]"
       aria-labelledby="explore-ghana-heading"
     >
       <Section

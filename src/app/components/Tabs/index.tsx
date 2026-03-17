@@ -53,7 +53,7 @@ export default function Tabs({
   return (
     <div
       className={cn(
-        'flex flex-1 items-center justify-end gap-[5.5px]',
+        'flex flex-1 min-w-0 items-center gap-[5.5px] overflow-x-auto scrollbar-hide',
         className,
       )}
     >

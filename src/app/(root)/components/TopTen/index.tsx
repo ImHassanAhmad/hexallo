@@ -9,7 +9,7 @@ import { TOP_TEN_ITEMS } from './constants';
 export default function TopTen() {
   return (
     <section
-      className="bg-[#F8F6EB] w-full overflow-x-hidden pl-[39px] pb-8"
+      className="bg-[#F8F6EB] w-full overflow-x-hidden pl-4 sm:pl-6 md:pl-8 lg:pl-[39px] pb-8"
       aria-labelledby="top-ten-heading"
     >
       <Section

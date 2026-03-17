@@ -9,7 +9,7 @@ import { FOR_YOU_ITEMS } from './constants';
 export default function ForYou() {
   return (
     <section
-      className="w-full overflow-x-hidden sm:mx-6 md:mx-8 lg:mx-[39px] py-[106px]"
+      className="w-full overflow-x-hidden mx-4 sm:mx-6 md:mx-8 lg:mx-[39px] py-10 sm:py-16 md:py-[106px]"
       aria-labelledby="for-you-heading"
     >
       <Section

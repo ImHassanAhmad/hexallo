@@ -38,7 +38,7 @@ export default function RootLayout({
       >
         <div className="flex min-h-screen flex-col">
           <Header />
-          <div className="h-[calc(100vh-110px)] overflow-y-auto overflow-x-hidden">
+          <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden">
             <main className="mx-auto flex w-full flex-1 flex-col">
               {children}
             </main>

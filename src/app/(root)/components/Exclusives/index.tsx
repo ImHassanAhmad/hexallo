@@ -9,7 +9,7 @@ import { EXCLUSIVES_ITEMS, EXCLUSIVES_SLIDER_BREAKPOINTS } from './constants';
 export default function Exclusives() {
   return (
     <section
-      className="w-full sm:mx-6 md:mx-8 lg:mx-[39px] pb-8"
+      className="w-full mx-4 sm:mx-6 md:mx-8 lg:mx-[39px] pb-8"
       aria-labelledby="exclusives-heading"
     >
       <Section

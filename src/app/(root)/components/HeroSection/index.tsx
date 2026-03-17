@@ -47,7 +47,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="w-full sm:px-6 md:px-8 lg:px-[42px] pt-[39px] pb-[52px]"
+      className="w-full px-4 sm:px-6 md:px-8 lg:px-[42px] pt-5 pb-6 sm:pt-[39px] sm:pb-[52px]"
       aria-label="Hero"
     >
       <div className="w-full mx-auto flex flex-col items-center gap-5">
@@ -85,7 +85,7 @@ export default function HeroSection() {
           </Swiper>
 
           <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 pt-12 pb-24">
-            <h1 className="text-center text-[36px] font-bold text-white drop-shadow-md max-w-4xl leading-tight">
+            <h1 className="text-center text-[22px] sm:text-[28px] md:text-[36px] font-bold text-white drop-shadow-md max-w-4xl leading-tight">
               Discover, Book & Enjoy What&apos;s
               <br />
               Happening Around You
@@ -94,7 +94,7 @@ export default function HeroSection() {
               From local events to world-famous experiences — all in one place.
             </p>
 
-            <div className="border-b-[1.75px] border-[#E3E3E1] mt-8 w-full max-w-[612px] flex flex-col sm:flex-row gap-2 sm:gap-3 sm:h-[37px] p-0 bg-white rounded-[12px] shadow-xl items-center">
+            <div className="mt-8 w-full max-w-[612px] flex flex-col sm:flex-row gap-2 sm:gap-0 sm:h-[37px] p-2 sm:p-0 bg-white rounded-[12px] shadow-xl items-stretch sm:items-center border border-[#E3E3E1]">
               <label className="sr-only" htmlFor="hero-search-event">
                 Search any event
               </label>
@@ -102,7 +102,7 @@ export default function HeroSection() {
                 id="hero-search-event"
                 type="search"
                 placeholder="Search any event"
-                className="ml-[20px] flex-1 min-w-0 h-[37px] px-4 py-0 rounded-xl text-[12px] font-normal text-[#6A6A6A] placeholder:text-[12px] placeholder:font-normal placeholder:text-[#6A6A6A] outline-none"
+                className="w-full sm:flex-1 sm:min-w-0 h-[37px] px-4 py-0 rounded-lg sm:rounded-none sm:ml-2 text-[13px] font-normal text-[#6A6A6A] placeholder:text-[13px] placeholder:font-normal placeholder:text-[#6A6A6A] outline-none border border-[#E3E3E1] sm:border-none"
               />
               <label className="sr-only" htmlFor="hero-search-where">
                 Where
@@ -111,7 +111,7 @@ export default function HeroSection() {
                 id="hero-search-where"
                 type="text"
                 placeholder="Where"
-                className="w-full sm:w-32 h-[37px] px-4 py-0 rounded-xl text-[14px] font-normal text-[#131314] placeholder:text-[14px] placeholder:font-normal placeholder:text-[#131314] focus:outline-none"
+                className="w-full sm:w-28 h-[37px] px-4 py-0 rounded-lg sm:rounded-none text-[13px] font-normal text-[#131314] placeholder:text-[13px] placeholder:font-normal placeholder:text-[#131314] focus:outline-none border border-[#E3E3E1] sm:border-none sm:border-l sm:border-l-[#E3E3E1]"
               />
               <label className="sr-only" htmlFor="hero-search-when">
                 When
@@ -120,14 +120,15 @@ export default function HeroSection() {
                 id="hero-search-when"
                 type="text"
                 placeholder="When"
-                className="w-full sm:w-32 h-[37px] px-4 py-0 rounded-xl text-[14px] font-normal text-[#131314] placeholder:text-[14px] placeholder:font-normal placeholder:text-[#131314] outline-none"
+                className="w-full sm:w-28 h-[37px] px-4 py-0 rounded-lg sm:rounded-none text-[13px] font-normal text-[#131314] placeholder:text-[13px] placeholder:font-normal placeholder:text-[#131314] outline-none border border-[#E3E3E1] sm:border-none sm:border-l sm:border-l-[#E3E3E1]"
               />
               <button
                 type="button"
-                className="mr-[10px] flex items-center justify-center h-[29px] w-[35px] rounded-[12px] bg-[#AE6F28] hover:bg-[#C07E30] active:scale-95 transition-all duration-200"
+                className="flex items-center justify-center gap-2 h-[38px] sm:h-[29px] sm:w-[35px] sm:mr-[10px] px-4 sm:px-0 rounded-lg sm:rounded-[12px] bg-[#AE6F28] hover:bg-[#C07E30] active:scale-95 transition-all duration-200"
                 aria-label="Search"
               >
                 <SearchIcon />
+                <span className="text-white text-[13px] font-medium sm:hidden">Search</span>
               </button>
             </div>
           </div>

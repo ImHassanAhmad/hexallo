@@ -13,7 +13,7 @@ import { cn } from '@/app/utility/cn';
 export default function Destinations() {
   return (
     <section
-      className="w-full overflow-x-hidden sm:mx-6 md:mx-8 lg:mx-[39px] pb-[100px]"
+      className="w-full overflow-x-hidden mx-4 sm:mx-6 md:mx-8 lg:mx-[39px] pb-10 sm:pb-14 md:pb-[100px]"
       aria-labelledby="destinations-heading"
     >
       <Section
