@@ -95,10 +95,6 @@ export default function Deals() {
         </div>
 
         <div className="relative w-full min-w-0 flex-1">
-          {/*
-            Below md: arrows sit in flex flow so they aren’t clipped by overflow-x
-            on ancestors. md+: overlay arrows on the carousel as before.
-          */}
           <div className="flex w-full min-w-0 items-center gap-2 sm:gap-3 md:block md:relative">
             <ArrowButton
               direction="left"
